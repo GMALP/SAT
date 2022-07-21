@@ -349,7 +349,7 @@ def alert_compare(data_all):
     # Initial Sample K value
     Sample_K_list = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200]
     iteration_list = ['Week1', 'Week2', 'Week3', 'Week4', 'Week5', 'Week6', 'Week7', 'Week8']  # 8 iterations
-    # main_edgerank.main_er(data_all, data_all_label, dimension_data, iteration_list, Sample_K_list, fall_acc, high_acc, low_acc)
+    main_edgerank.main_er(data_all, data_all_label, dimension_data, iteration_list, Sample_K_list, fall_acc, high_acc, low_acc)
     main_ae.main_ae_alert(data_all_label, dimension_data, iteration_list, Sample_K_list)
     main_en.main_en(data_all_label, dimension_data, iteration_list, Sample_K_list)
     main_if.main_if(data_all_label, dimension_data, iteration_list, Sample_K_list)
