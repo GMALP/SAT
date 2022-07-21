@@ -131,7 +131,6 @@ def rank_process(data):
     certatinty = list(data['确信度'])
     level = list(data['等级'])
     label = list(data['label'])
-    note = list(data['note'])
 
     if '已失陷' in certatinty:
         certatinty = ['已失陷']
@@ -153,7 +152,6 @@ def rank_process(data):
 
     ip = list(set(ip))
     lab = list(set(label))
-    note = list(set(note))
     dic = {}
     dic['事件名称'] = ",".join('%s' % ix for ix in event_name)
     dic['情报IOC'] = ",".join('%s' % ix for ix in ioc)
@@ -161,7 +159,6 @@ def rank_process(data):
     dic['IP'] = ",".join('%s' % ix for ix in ip)
     dic['等级'] = ",".join('%s' % ix for ix in level)
     dic['label'] = ",".join('%s' % ix for ix in lab)
-    dic['note'] = ",".join('%s' % ix for ix in note)
     result_ = pd.DataFrame(dic, index=[0])
 
     return result_
