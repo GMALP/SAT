@@ -51,10 +51,10 @@ def task3():  # node_algorithm_compare
 
 def plot_table():
     """figure and table realize based on compare data"""
-    print('plot begin...') 
+    print('plot begin...')
     ''''''
     # edge algorithm relative ...
-	print('plot edge algorithm compare results...')
+    print('plot edge algorithm compare results...')
     plot_compare_edge_rank.plot_6_usp_bar_eer_edge()
     plot_compare_edge_rank.plot_6_usp_bar_rer_mer_edge()
     plot_compare_edge_rank.plot_roc_edge()
@@ -63,7 +63,7 @@ def plot_table():
     plot_compare_edge_class.sp_alert_number_fpr_fnr_f1()
 
     # node algorithm relative
-	print('plot node algorithm compare results...')
+    print('plot edge algorithm compare results...')
     plot_compare_node.plot_6_usp_bar_rer_mer_node()
     plot_compare_node.plot_6_usp_bar_eer_node()
     plot_compare_node.plot_roc_node()
