@@ -245,17 +245,18 @@ def plot_roc_edge():
             bbox = legend.get_window_extent()
             # bbox = bbox.from_extent(*(bbox.extent + np.array(expand)))  # expand=[-5, -5, 5, 5]
             bbox = bbox.transformed(fig.dpi_scale_trans.inverted())
-            if not os.path.exists(save_path + 'results/edge_compare_results/f1_table/'):
-                os.makedirs(save_path + 'results/edge_compare_results/f1_table/')
-            fig.savefig('./results/edge_compare_results/roc_edge/' + 'usp_alert_ranking_legend.pdf', dpi=500,
+            if not os.path.exists(save_path + 'results/edge_compare_results/roc_edge/'):
+                os.makedirs(save_path + 'results/edge_compare_results/roc_edge/')
+            fig.savefig(save_path + 'results/edge_compare_results/roc_edge/' + 'usp_alert_ranking_legend.pdf', dpi=500,
                         bbox_inches=bbox)
 
             # fig.show()
 
         export_legenf(legend)
         legend.remove()
-
-        plt.savefig('./results/edge_compare_results/roc_edge/' + 'usp_edge_ranking_6_roc_' + str(iteration) + '.pdf',
+        if not os.path.exists(save_path + 'results/edge_compare_results/roc_edge/'):
+            os.makedirs(save_path + 'results/edge_compare_results/roc_edge/')
+        plt.savefig(save_path + 'results/edge_compare_results/roc_edge/' + 'usp_edge_ranking_6_roc_' + str(iteration) + '.pdf',
                     bbox_inches='tight', dpi=500, format="pdf")
 
         # plt.show()

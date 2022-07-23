@@ -47,8 +47,9 @@ def plot_fpr_fnr_p():
         plt.xlabel('Top-$\it{k}$ alerts / $\it{k}$-th alert', fontsize=fsize)  # font, \kappa
         plt.grid(alpha=0.2)
         plt.legend(loc='upper right', markerscale=2)
-
-        plt.savefig('./results/edge_fpr_fnr_p/edge_fpr_fnr_p_' + str(iteration_name) + '.pdf',
+        if not os.path.exists(save_path + 'results/edge_fpr_fnr_p/'):
+            os.makedirs(save_path + 'results/edge_fpr_fnr_p/')
+        plt.savefig(save_path + 'results/edge_fpr_fnr_p/edge_fpr_fnr_p_' + str(iteration_name) + '.pdf',
                     bbox_inches='tight', dpi=500, format="pdf")
 
         # plt.show()
