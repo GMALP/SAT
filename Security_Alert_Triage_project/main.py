@@ -63,10 +63,12 @@ def plot_table():
     plot_compare_edge_class.sp_alert_number_fpr_fnr_f1()
 
     # node algorithm relative
-    print('plot edge algorithm compare results...')
+    print('plot node algorithm compare results...')
     plot_compare_node.plot_6_usp_bar_rer_mer_node()
     plot_compare_node.plot_6_usp_bar_eer_node()
     plot_compare_node.plot_roc_node()
+
+    print('plot process done..')
 
 
 def main_():
