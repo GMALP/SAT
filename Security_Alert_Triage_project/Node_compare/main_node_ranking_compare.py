@@ -10,22 +10,22 @@ import pandas as pd
 import gc
 import os
 
-from edgeRank import main_edgerank_node
-from ae import main_ae_node
-from iforest import main_if_node
-from kde import main_kde_node
-from pagerank import main_pr_node
-from pca import main_pca_node
+import main_edgerank_node
+import main_ae_node
+import main_if_node
+import main_kde_node
+import main_pr_node
+import main_pca_node
 
 from threading import Thread
 
 import warnings
 warnings.filterwarnings('ignore')
 
-print('Data loading ...')
-data_all = pd.read_excel('./alert_data/alert_data.xlsx')
+# print('Data loading ...')
+# data_all = pd.read_excel('./alert_data/alert_data.xlsx')
 # Initial Sample K value
-Sample_K_list = [100]
+# Sample_K_list = [100]
 
 
 def get_chinese_feature(logs):

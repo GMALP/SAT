@@ -29,24 +29,24 @@ def task1():  # edgerank algorithm
     print('Data loading ...')
     data_all = pd.read_excel('./alert_data/alert_data.xlsx')
     print('EdgeRank_Active_Learning begin...')
-    main_edgerank.main_er_solo()
+    main_edgerank.main_er_solo(data_all)
 
 
 def task2():  # edge_algorithm_compare
     """"""
     # print('Data loading ...')
     data_all = pd.read_excel('./alert_data/alert_data.xlsx')
-    print('Edge Compare process begin ...')
+    print('Edge algorithm Compare process begin ...')
     main_edge_ranking_compare.alert_compare(data_all)
-    print('Edge Compare process done.')
+    print('Edge algorithm Compare process done.')
 
 
 def task3():  # node_algorithm_compare
     """"""
     data_all = pd.read_excel('./alert_data/alert_data.xlsx')
-    print('Node Compare process begin ...')
+    print('Node algorithm Compare process begin ...')
     main_node_ranking_compare.node_compare(data_all)
-    print('Node Compare process done.')
+    print('Node algorithm Compare process done.')
 
 
 def plot_table():
@@ -72,7 +72,7 @@ def plot_table():
 
 
 def main_():
-    """mian threah"""
+    """main thread"""
     t1 = Thread(target=task1)
     t2 = Thread(target=task2)
     t3 = Thread(target=task3)
