@@ -48,5 +48,6 @@ python main.py
 
 
 ## other note
-Due there are many comparison algorithms, the final running time is relatively long.
+1. Due there are many comparison algorithms, the final running time is relatively long.
 
+2. We will continue to optimize later. If you have any questions, please contact: arvilla@qq.com
